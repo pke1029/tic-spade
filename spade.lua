@@ -1,7 +1,10 @@
--- title:	shade
+-- title:	spade
 -- author:	pke1029
 -- desc:	Realistic cel shader for a sphere.
 -- script:	lua
+
+-- sorce code available at
+-- https://github.com/pke1029/tic-spade
 
 PI = 3.1415
 sin = math.sin
