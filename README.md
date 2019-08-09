@@ -6,9 +6,9 @@ A tool for generating realistic pixelated sphere.
 # Model
 
 The model I'm using is given by
-- <img src="https://latex.codecogs.com/gif.latex?f(P,D,A)=P\left(\frac{A(1-D)}{D+A(1-D)}A+D\right) " /> 
-where
-- <img src="https://latex.codecogs.com/gif.latex?P=\text{sphere},D\text{direct light},A\text{ambient light}\in[0,1] " /> 
-and the computation is done pointwise.
+
+![Equation](https://latex.codecogs.com/gif.latex?f(P,D,A)=P\left(\frac{A(1-D)}{D&plus;A(1-D)}A&plus;D\right))
+
+where ![Equation](https://latex.codecogs.com/gif.latex?P=\text{sphere&space;color},\&space;D=\text{direct&space;light},\&space;A=\text{ambient&space;light}&space;\in&space;[0,1]) and the computation is done pointwise.
 
 I derived this model by myself so it's possible that it might be off (feedback welcome). 
