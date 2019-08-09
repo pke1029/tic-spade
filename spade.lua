@@ -196,6 +196,7 @@ sphere = {
 				end
 			end
 		end
+		sphere.updateFlux()
 	end,
 
 	getNormal = function(i, j)
@@ -205,8 +206,10 @@ sphere = {
 		return vec3d.new(x, y, z):normalise()
 	end,
 
-	getFlux = function(p)
-		return vec3d.dot(p.n, light.v)
+	updateFlux = function()
+		for i,p in pairs(sphere.elemt) do
+			p.f = vec3d.dot(p.n, light.v)
+		end
 	end,
 
 	draw = function()
@@ -218,10 +221,9 @@ sphere = {
 		sphere.blendColor()
 		-- draw
 		for i,p in pairs(sphere.elemt) do
-			local flux = sphere.getFlux(p)
 			for j = 0,shades do
 				local w = 1 + cos(angleThresh*PI/180)
-				if flux+1 < (2-w)*(j/shades)+w then
+				if p.f+1 < (2-w)*(j/shades)+w then
 					pix(p[1]+1, p[2]+1, j+6)
 					break
 				end
@@ -267,6 +269,7 @@ light = {
 			local sy = sin(dy / 70)
 			light.v:rotate(light.pivot, cos(dx / 70), sx, vec3d.new(sx, 0, 0))
 			light.v:rotate(light.pivot, cos(dy / 70), sy, vec3d.new(0, sy, 0))
+			sphere.updateFlux()
 			return
 		end 
 		-- keyboard controls
@@ -280,6 +283,7 @@ light = {
 		if key(1) then b = b - 1 end
 		if key(4) then b = b + 1 end
 		light.v:rotate(light.pivot, abs(b)*(light.c-1)+1, b*light.s, b*v)
+		if a ~= 0 or b ~= 0 then sphere.updateFlux() end
 	end
 }
 
