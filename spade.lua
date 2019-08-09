@@ -305,7 +305,6 @@ gui = {
 		print("hex", 90, 130)
 		print("dec", 110, 130)
 		
-
 		gui.updateField()
 		gui.drawWin(0, 0, 2, "SPHERE", gui.field1)
 		gui.drawWin(0, 38, 3, "LIGHT", gui.field2)
@@ -313,7 +312,7 @@ gui = {
 
 		-- foot
 		rect(130, 129, 109, 7, 15)
-		spr(16, 130, 128, 1)
+		spr(16, 130, 128, 0)
 		print("SPADE", 137, 130, 0)
 		print("@pke1029", 192, 130, 0)
 
