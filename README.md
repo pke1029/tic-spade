@@ -3,6 +3,8 @@ A tool for generating realistic pixelated sphere.
 
 ![](demo.gif)
 
+Check it out here: https://tic.computer/play?cart=919
+
 # Model
 
 The model I'm using is given by
