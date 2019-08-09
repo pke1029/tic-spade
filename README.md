@@ -1,2 +1,4 @@
-# tic-spade
-Pixel sphere shader
+# Spade
+A realistic pixelated sphere shader
+
+![](teapot.gif)
