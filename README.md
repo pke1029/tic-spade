@@ -7,7 +7,7 @@ Check it out here: https://tic.computer/play?cart=919
 
 # Model
 
-The model I'm using is given by
+The model is given by
 
 ![Equation](https://latex.codecogs.com/gif.latex?f(P,D,A)=P\left(\frac{A(1-D)}{D&plus;A(1-D)}A&plus;D\right))
 
